@@ -1,0 +1,52 @@
+   /*Create tournament*/
+
+ POST
+ http://localhost:8080/tournaments/tourney
+ {
+   "id": 0,
+   "name": "Soccer",
+   "active": false
+ }
+
+   /*Get tournament*/
+
+GET
+http://localhost:8080/tournaments/tourney/1
+
+
+   /*Start tournament*/
+
+ PUT
+ http://localhost:8080/tournaments/tourney
+ {
+   "id": 1,
+   "isActive": true
+ }
+
+    /*Generate match grid and appoint opponents for participants*/
+  GET
+  http://localhost:8080/match-grids/grid/1
+
+    /* Adding participants in tournament*/
+
+  POST
+ {
+   "id": 0,
+   "name": "Adollf",
+   "game": {
+     "id": 1
+   },
+    "tournament": {
+     "id": 1
+   }
+ }
+
+    /* Removing participants from tournament while it's on hold*/
+
+  DELETE
+  http://localhost:8080/participants/attendee/1
+
+    /* Summarizing results in match*/
+
+  GET
+  http://localhost:8080/match-grids/grid/49
