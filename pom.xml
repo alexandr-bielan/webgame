@@ -182,13 +182,13 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
+                <!--<configuration>
                     <repository>registry.heroku.com/${project.artifactId}/web</repository>
                     <tag>latest</tag>
-                    <!--<buildArgs>
+                    <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>-->
-                </configuration>
+                    </buildArgs>
+                </configuration>-->
 
                 <dependencies>
                     <!--  <dependency>
