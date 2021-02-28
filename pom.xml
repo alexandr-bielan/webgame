@@ -170,7 +170,7 @@
                 <version>3.0.3</version>
             </plugin>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.3</version>
@@ -192,21 +192,39 @@
                 </configuration>
 
                 <dependencies>
-                    <!--  <dependency>
+                    &lt;!&ndash;  <dependency>
                           <groupId>javax.activation</groupId>
                           <artifactId>javax.activation-api</artifactId>
                           <version>1.2.0</version>
-                      </dependency>-->
+                      </dependency>&ndash;&gt;
 
 
                 </dependencies>
-            </plugin>
+            </plugin>-->
 
             <!-- <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
 
             </plugin>-->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.2.2</version>
+                <configuration>
+                    <imageName>Account-Srv</imageName>
+                    <baseImage>openjdk:11-jre-alpine</baseImage>
+                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                    <!-- copy the service's jar file from target into the root directory of the image -->
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
         </plugins>
 
 
