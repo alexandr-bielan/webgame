@@ -170,7 +170,7 @@
                 <version>3.0.3</version>
             </plugin>
 
-            <!--<plugin>
+            <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.9</version>
@@ -191,15 +191,15 @@
                 </configuration>
 
                 <dependencies>
-                    &lt;!&ndash;  <dependency>
+                    <!--  <dependency>
                           <groupId>javax.activation</groupId>
                           <artifactId>javax.activation-api</artifactId>
                           <version>1.2.0</version>
-                      </dependency>&ndash;&gt;
+                      </dependency>-->
 
 
                 </dependencies>
-            </plugin>-->
+            </plugin>
 
             <!-- <plugin>
                 <groupId>org.springframework.boot</groupId>
