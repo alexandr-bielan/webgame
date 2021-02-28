@@ -1,1 +1,1 @@
-web: java -jar target/WebServerBootNew-1.0.jar
+web: java -jar target/webserver-1.0.jar
