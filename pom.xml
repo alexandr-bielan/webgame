@@ -151,7 +151,7 @@
     <build>
         <plugins>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
                 <version>1.1.1</version>
@@ -172,8 +172,8 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-           <!-- <plugin>
+            </plugin>-->
+            <!--<plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.2.3.RELEASE</version>
@@ -186,12 +186,12 @@
                     </execution>
                 </executions>
             </plugin>-->
-
-          <!--  <plugin>
+            <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.3</version>
-            </plugin>-->
+            </plugin>
+
 
             <!--<plugin>
                 <groupId>com.spotify</groupId>
@@ -228,7 +228,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
 
             </plugin>-->
-            <plugin>
+            <!--<plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.2</version>
@@ -236,7 +236,7 @@
                     <imageName>Account-Srv</imageName>
                     <baseImage>openjdk:11-jre-alpine</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-                    <!-- copy the service's jar file from target into the root directory of the image -->
+                    &lt;!&ndash; copy the service's jar file from target into the root directory of the image &ndash;&gt;
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -245,7 +245,7 @@
                         </resource>
                     </resources>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
 
 
