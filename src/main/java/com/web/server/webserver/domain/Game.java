@@ -29,8 +29,10 @@ public class Game {
 
     private String participantTwo;
 
+    @Column(name = "participant_one_points")
     private int participantOnePoints;
 
+    @Column(name = "participant_two_points")
     private int participantTwoPoints;
 
     @ManyToOne

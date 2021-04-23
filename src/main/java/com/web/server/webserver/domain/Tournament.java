@@ -14,7 +14,6 @@ public class Tournament {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tournament_id")
-
     private int id;
 
     @Column(unique = true)
@@ -25,11 +24,26 @@ public class Tournament {
     @Column(name = "is_active")
     private boolean isActive;
 
+    @Column(name = "number_of_participants")
+    private Integer numberOfParticipants;
+
+    @Column(name = "number_of_games")
+    private Integer numberOfGames;
+
+
     public Tournament() {
     }
 
     public Tournament(String name) {
         this.name = name;
+    }
+
+    public Integer getNumberOfGames() {
+        return numberOfGames;
+    }
+
+    public void setNumberOfGames(Integer numberOfGames) {
+        this.numberOfGames = numberOfGames;
     }
 
     public int getVersion() {
@@ -62,6 +76,14 @@ public class Tournament {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public Integer getNumberOfParticipants() {
+        return numberOfParticipants;
+    }
+
+    public void setNumberOfParticipants(Integer numberOfParticipants) {
+        this.numberOfParticipants = numberOfParticipants;
     }
 
     @Override
